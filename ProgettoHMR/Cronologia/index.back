@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111997111-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111997111-1');
+</script>
+	<title>Cronologia HMR</title>
+	<script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> 
+	<meta name="description" content="HMR nasce ufficialmente nel 2006. Qui è raccolto, anno per anno, tutto quanto è successo di importante nella storia del progetto.">
+	<script type='text/javascript' src='../EPICAC/JSwebsite/searchAndSharing.js'></script>
+	<script type='text/javascript' src='../Assets/JS/HMR_CreaHTML.js'></script>
+	<link rel="stylesheet" type="text/css" href="../HMR_Style.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<script type="text/javascript" src="../Asset/JS/HMR_ActiveLink.js"></script>
+	<link rel="icon" type="image/png" href="../Assets/Images/HMR_2017g_GC-WebFavIcon16x16.png" />
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div class="HMR_Banner">
+		<script> creaHeader(1, 'HMR_2017g_GC-WebHeaderRite-270x105-1.png') </script>
+	</div>
+	
+	<div id="HMR_Menu" class="HMR_Menu" >
+		<script> creaMenu(1, 1) </script>
+	</div>
+	
+	<div class="HMR_Content">
+		
+		 
+		<div class= "HMR_Text"><!--div per il testo statico da spostare con margin a sinistra-->
+		 
+			<?php
+				$content = file_get_contents('../Assets/HTML/HMR_Cronologia.html');
+				echo $content;
+			?>
+			
+			
+			<h2 id="2017">2018</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2018' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+		
+		 
+			<h2 id="2017">2017</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2017' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+			
+			<h2 id="2016">2016</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2016' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+			
+			<h2 id="2015">2015</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2015' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+			
+			<h2 id="2014">2014</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2014' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+			
+			<h2 id="2013">2013</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2013' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+			
+			<h2 id="2012">2012</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2012' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+			
+			<h2 id="2011">2011</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2011' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+			
+			<h2 id="2010">2010</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2010' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+			
+			<h2 id="2009">2009</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2009' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+			
+			<h2 id="2008">2008</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2008' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+			
+			<h2 id="2007">2007</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2007' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+			
+			<h2 id="2006">2006</h2>
+			<?PHP
+			include ('../EPICAC/APIdb/HMR_EpicacDB.php');
+			$query= "SELECT cronos.Date as CrDate, cronos.Title as CrTitle, cronos.Subtitle as CrSubtitle, cronos.Text as CrText, cronos.Visible, GROUP_CONCAT(distinct(people.Brief)SEPARATOR ', ') as autori, happenings.Date as HaDate, happenings.Anchor FROM cronos LEFT JOIN cronopeople ON cronos.IdCr = cronopeople.IdCr LEFT JOIN people ON people.IdPp = cronopeople.IdPp LEFT JOIN happenings ON happenings.IdHa = cronos.IdCr WHERE cronos.Visible= 'si' AND YEAR(happenings.Date) = '2006' GROUP BY cronos.IdCr ORDER BY happenings.Date desc";
+			$result = mysqli_query($db, $query);
+			
+			while($row = mysqli_fetch_array($result)){
+				echo '<div class="crono">';
+				echo '<p>';
+				if( $row['CrDate'] != "0000-00-00"){
+					echo '<b class="HMR_h3">'.$row['CrDate'].' - </b>';
+				}
+				echo '<b class="HMR_h3" id="'.$row['Anchor'].'">'.$row['CrTitle'].'</b>';
+				echo '<br/>';
+				if($row['CrSubtitle'] != ""){
+					echo '<i>' . $row['CrSubtitle'].';</i> ';
+				}
+				if ($row['autori'] != ""){
+					echo '<i>' . $row['autori'].'</i> ';
+				}
+				if (!empty($row['autori']) or !empty($row['CrSubtitle'])){ 
+					echo '<br/>';
+				}
+				echo $row['CrText'];
+				echo '</p>';
+				echo '</div>';
+			}
+			?>
+		
+		</div>
+	
+	</div>
+	
+	<div class="HMR_Footer">
+	<?PHP
+	$queryultimaMod = 'SELECT Cronos FROM lastmod';
+	$resultUltimaMod = mysqli_query($db, $queryultimaMod);
+	while($row = mysqli_fetch_array($resultUltimaMod)){
+		$ultimaMod=  $row['Cronos'];
+	}
+	
+	echo '<div class="HMR_FooterTop">
+		<img id="HMR_imgFooter" src="../Assets/Images/CC_By-Nc-Nd-Eu-80x28.png" alt="">
+		<div id="HMR_scrittaFooterUp">Copyright © 2009 - 2018 G.A.Cignoni</div>
+		<div id="HMR_scrittaFooterBottom">Pagina creata: 03/21/2009; ultima modifica: '.$ultimaMod.'</div>
+	</div>
+	<div class="HMR_FooterBottom">
+		<div id="HMR_contatti"><a href="mailto:giovanni.cignoni@di.unipi.it">Contatti</a> e <a href="../Persone/">persone</a></div>
+		<div id="HMR_login"><a href="../Administration/Assets/PHP/autentication.php"><img src="../Assets/Images/HMR_2017g_GC-LoginIcon24x24.png" alt="Login"></a></div>
+	</div>';
+	?>
+	</div>
+</body>
+
+
+</html>

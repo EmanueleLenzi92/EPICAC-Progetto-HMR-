@@ -1,0 +1,1100 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&subset=latin-ext');
+
+
+	 
+/*html, body{
+	margin: 0;
+	padding: 0;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size:14px;
+	line-height: 15px;
+}*/
+
+body,html{
+  font-family: "Source Sans Pro";
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 20px;
+  color: #202020;
+}
+
+/*p{color: #242424;
+}*/
+
+p{
+  font-family: "Source Sans Pro";
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 20px;
+  color: #202020;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+
+pre{
+  font-family: "monospace";
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 16px;
+  color: #202020;
+  margin-left: 40px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+/*h1{
+	font-size:18px;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	color:#d81a68;
+}*/
+
+h1{
+  font-family: "Source Sans Pro";
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 30px;
+  color: #e43972;
+ /* margin-top: 20px;  va considerato nel posizionamento del content */ 
+  margin-bottom: 10px;
+}
+
+h2{
+  font-family: "Source Sans Pro";
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 20px;
+  color: #e43972;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h3{
+  font-family: "Source Sans Pro";
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 20px;
+  color: #e43972;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+h3.PaginaQ{
+  font-family: "Source Sans Pro";
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 20px;
+  color: #e43972;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+
+
+/*b, strong{ color:#d81a68;}*/
+b{
+	font-weight: bold;
+  color: #e43972;
+  font-size: 16px;
+}
+
+strong{
+	font-weight: bold;
+  color: #e43972;
+  font-size: 16px;
+}
+
+a{color:#d81a68;
+text-decoration: none;
+border: 0px;
+outline: 0;}
+
+
+a:hover{text-decoration: underline}
+
+a:visited{color:#891847}
+
+
+
+
+
+
+
+.HMR_p{
+	font-family: "Source Sans Pro";
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 20px;
+	color: #202020;
+
+	margin-bottom: 10px;
+}
+
+
+/*h1{
+	font-size:18px;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	color:#d81a68;
+}*/
+
+.HMR_h1{
+	font-family: "Source Sans Pro";
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 30px;
+	color: #e43972;
+	margin-top: 20px; /* va considerato nel posizionamento del content */
+	margin-bottom: 10px;
+}
+
+.HMR_h2{
+	font-family: "Source Sans Pro";
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #e43972;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.HMR_h3{
+	font-family: "Source Sans Pro";
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #e43972;
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+
+
+
+/*b, strong{ color:#d81a68;}*/
+.HMR_b{
+	font-weight: bold;
+	color: #e43972;
+}
+
+.HMR_strong{
+	font-weight: bold;
+	color: #e43972;
+}
+
+.HMR_a{color:#d81a68;
+	text-decoration: none;}
+
+.HMR_a:hover{text-decoration: underline}
+
+.HMR_a:visited{color:#891847}
+
+.HMR_ul{
+	padding-left: 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	list-style-type: none;
+	list-style-position: outside;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+.HMR_ul li{
+	padding-left: 20px;
+	text-indent: -11px;
+	margin-bottom: 0px;
+	line-height: 20px;
+	font-size: 16px;
+
+}
+
+.HMR_ul li:before{
+	left: -10px;
+	width: 30px;
+	position: relative;
+	text-align: right;
+	/*font-size: 20px;*/
+	font-weight: bold;
+	content: "• ";
+	color: #e43972;
+	line-height: 20px;
+}
+
+
+.HMR_ol {
+	counter-reset: item;
+	padding-left: 1.5em;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+.HMR_ol li {
+	display: block;
+	padding-left: 1.5em;
+	position: relative;
+	left: 2em;
+	line-height: 20px;
+	font-size: 16px;
+}
+
+.HMR_ol li:before {
+	position: absolute;
+	left: -2em;
+	width: 2em;
+	text-align: right;
+	content: counter(item) ". ";
+	counter-increment: item;
+	color: #e43972;
+	font-size: 12pt;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+/*CORSO*/ 
+
+td.TableCol432{
+	width: 432px;
+	vertical-align: top;
+}
+
+td.TableCol072{
+	width: 72px;
+	vertical-align: top;
+}
+
+td.TableCol360{
+	width: 360px;
+	vertical-align: top;
+}
+
+p.Indented{
+	margin-left: 20px;
+}
+
+p.BackIndented{
+	text-indent: -20px;
+	margin-left: 20px;
+}
+
+p.NoBottomSpace{
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+/* Pagina Q */
+td.TableCol160{
+	width: 160px;
+	vertical-align: MIDDLE;
+}
+
+td.TableCol668{
+	width: 668px;
+	vertical-align: MIDDLE;
+}
+
+td.TableCol160 img{
+	width: 150px;
+	height: 130px;
+	vertical-align: MIDDLE;
+	margin-top: 8px;
+}
+
+/*Festival scienza 2016*/
+
+.Table1Img{
+	width:100%;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+.Table1Img td{
+	width: 100%;
+	vertical-align: top;
+	text-align:center;
+}
+
+.Table2Img{
+	width:100%;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+.Table2Img td{
+	width:50%;
+	vertical-align: top;
+	text-align:center;
+}
+
+.Table4Img{
+	width:100%;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+.Table4Img td{
+	width: 25%;
+	vertical-align: top;
+	text-align:center;
+}
+
+/*Lezioni al museo*/
+.Table70-30{
+	width: 100%;
+	border-collapse: collapse;
+	
+}
+td.Table70-30Left{
+	width: 70%;
+	vertical-align: top;
+	
+}
+td.Table70-30Right{
+	width: 30%;
+	vertical-align: top;
+	text-align: center;
+	
+}
+td.Table70-30Right img{
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	WIDTH: 225px; 
+	HEIGHT: 150px;
+}
+
+
+
+
+
+.HMR_Banner{
+	width: /*809px;*/ 864px;
+    height: 105px; /* 105/3 = 35 */
+	font-family: "Source Sans Pro", sans-serif;
+	padding:0px;
+    position: relative; /*gli do posizione relativa per posizionare in maniera assoluta il logo, le 2 sritte e l'immagine dell'header*/
+	border:0px;
+	margin-top: 0px;
+	margin-bottom:0px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	
+}
+
+
+
+
+.HMR_Banner #HMR_Logo{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+	padding: 0px;
+	margin: 0px;
+    border: 0px;
+	width:140px;
+	
+	} 
+			
+
+.HMR_Banner #HMR_HeaderRightImg{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: 0;
+	margin: 0px;
+    border: 0px;
+	
+}
+
+.HMR_Banner #HMR_HeaderText1{
+	position: absolute;
+	top: 55px;
+	left: 142px;
+	border: 0px;
+	z-index: 1;
+	font-size: 32px;
+	color: #e43972;
+	font-weight: bold;
+}
+
+
+
+.HMR_Banner #HMR_HeaderText2{
+	position: absolute;
+	top: 81px;
+	left: 144px;
+	border: 0px;
+	z-index: 1;
+	font-size: 18px;
+	color: #a0a0a0;
+	font-weight: bold;
+}
+
+.HMR_Banner a:hover{text-decoration:none;}
+.HMR_Banner a:visited{color:#e43972;}
+
+
+
+
+
+
+
+/* Menu navigazione */
+
+.HMR_Menu{
+	width: 864px; /*60%*/
+	padding: 0px;
+	border:0px;
+	margin-top:0px;
+	margin-right:auto;
+	margin-left: auto;
+	margin-bottom: 0px;
+	font-size:14px;
+	font-weight:bold;
+	height:30px; /* Come altezza nastro del logo*/
+	background-color:/*#202020;*/ #353535;
+	position: relative;
+
+}
+
+.HMR_Menu #HMR_LeftMenu{ /* è il div che contiene la prima lista (<ul>crono, eveti, oggisti ecc </ul> */
+	
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	height:100%;
+	/*border:1px solid red;*/
+	position: absolute;
+	left: 18px /*lo sposto di 20px a sinistra per dargli magine 18px da sinistra*/
+	
+}
+
+.HMR_Menu #HMR_RightMenu{ /* è il div che contiene la seconda lista (<ul>icone sharing e ricerca </ul> */
+	margin: 0px 0px 0px 0px;
+	padding: 0;
+	height:100%;
+	
+	position: absolute;
+	right: 18px /*lo sposto di 18px a destra per dargli magine 18px da destra*/
+}
+
+.HMR_Menu #HMR_LeftMenu ul{ 
+	
+	margin: 0px; 
+	padding: 0px;
+	border: 0px;
+	height:100%;
+	
+	
+}
+
+.HMR_Menu #HMR_RightMenu ul{ 
+	
+	margin: 0px; 
+	padding: 0px;
+	border: 0px;
+	height:100%;
+	
+	
+}
+
+
+
+
+.HMR_Menu #HMR_LeftMenu li{ /* tutti i li della parte di sinistra hanno float a sinistra (per allinearli) e hanno una distanza tra loro (quindi da destra) di 18px */
+	margin:0 px;
+	padding: 0px;
+	list-style: none;
+	float: left; 
+	height:100%;
+	margin-right: 18px;
+	
+	
+	
+	/*border:1px solid orange;*/
+}
+
+
+
+.HMR_Menu #HMR_RightMenu li{ /* tutti i li della parte di destra hanno float a sinistra (per allinearli) e hanno una distanza tra loro (quindi da sinistra) di 18px */
+	margin:0 px;
+	padding: 0px;
+	list-style: none;
+	float: left; 
+	height:100%;
+	margin-left: 18px;
+	
+	
+	
+	/*border:1px solid blue;*/
+}
+
+
+
+.HMR_Menu ul li #HMR_Ricerca{
+	width: 100px;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	height: 22px;
+	
+	position:absolute;
+	/*top: 4px;*/
+	top: 4px;
+	right: 2px;
+	font-family: "Source Sans Pro", sans-serif;
+		
+		/* css 3 */
+	border-radius:5px;
+	/* mozilla */
+	-moz-border-radius:5px;
+	/* webkit */
+	-webkit-border-radius:5px;
+
+	}
+
+.HMR_Menu ul li a{
+	text-decoration: none;
+	font-size:16px;
+	text-align: center;
+	line-height: 30px; /* centro verticale */
+	color:#CCC;
+	
+	
+}
+
+.HMR_Menu ul li a.active{ 
+	text-decoration: underline;
+	text-decoration-color: #e43972;
+	color: #fff;
+}
+.HMR_Menu ul li a.active:hover{ /*Per sovrascrivere la regola hover principale*/
+	text-decoration:underline;
+	text-decoration-color: #e43972;
+	}
+
+
+
+.HMR_ContenitoreImgCentrate { /*sono i li contenitori delle immagini nel menu */
+
+position: relative;
+width: 24px; /*larghezza di questi li è uguale alla larghezza delle icone*/
+
+}
+
+
+#HMR_ShareIcon{ width: 24px; }
+
+#HMR_SearchIcon{width: 24px; }
+
+
+.HMR_Menu ul li a img{ 
+display: block;
+position: absolute;
+top: 3px; /*(altezza_genitore - altezza_figlio) / 2 -->centro verticalmente*/
+
+ }
+ 
+ #facebookShare:hover, #emailShare:hover, #twitterShare:hover{ 
+	opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+ }
+ 
+#HMR_Eng a{color: #d81a68; }
+
+.HMR_Menu ul li a:hover{
+	color:#fff;
+	text-decoration:none;
+}
+
+
+
+
+/* Content */
+
+.HMR_Content{
+	clear: both;
+	width: 864px; /*60%*/
+	padding: 0px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	/*border: 1px solid black;*/
+	
+	position: relative; 
+	 min-height:840px; /* per avere sempre la barra dello scroll */
+	/*background-color:#F8F8F8;*/
+}
+
+.HMR_Text{ 
+margin-left: 20px; /*è il tag al'interno di Content per dare margine a sinistra e destra del testo uguale all scritte del Menu sopra*/
+margin-right:20px;
+}
+
+.HMR_TextIndex{ margin-left: 20px; } /* Text in index non ha bisogno del margine a destra, perche c'è il boxDinamico*/
+
+
+
+
+/* Index */
+
+#HMR_StaticBox{
+	margin-right: -4px; /*il margine -4 è per unire i 2 box (static e dinamic) senza margine, dato che inline-block di defoult stacca ibox di 4 px*/
+	
+	width: 504px;
+	/*border: 1px solid red;*/
+	/*height: 450px;*/
+	/*float: left;*/
+	
+	display: inline-block;
+	
+	
+	}
+	
+	
+	
+#HMR_DinamicBox{
+	vertical-align:top; /* per mettere il blocco in alto */
+	width: 340px; /* non riempo fino in fondo la pagina perche lascio 20 px per stare allineato con ENG*/
+	
+	/*margin-left: 504px;*/
+	/*margin-top: 20px;*/
+	display: inline-block;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	
+	
+	
+
+}
+	
+.HMR_cellaImmagine img {
+width: 72px;
+height:72px;
+/*border: 1px solid red;*/
+margin-left: 8px;
+margin-top: 4px;
+
+}
+
+.HMR_cellaImmagine{
+	width: 80px;
+	vertical-align: top;
+	/*border: 1px solid yellow;*/
+	}
+
+.HMR_cellaScritte{
+/*border: 1px solid orange;*/
+width: 340px;
+
+}
+
+#HMR_DinamicBox table{
+	width: 72*5px; /* 96%*/
+	margin: 0px;
+	padding: 0px;
+	border-spacing: 0px;
+	height:108px; /*72*1.5px;*/
+	/*border: 1px solid red;*/
+	/*line-height: 16px;*/
+	font-family:"Source Sans Pro", sans-serif;
+	
+	
+}
+
+#HMR_DinamicBox table h3{
+	margin-left: 4px;
+	font-size:16px;
+	margin-top: -3px; /*per togliere i margini del normale h3*/
+	margin-bottom: 0px;
+}
+
+#HMR_DinamicBox table a:hover{text-decoration: none;}
+
+#HMR_DinamicBox table p{
+margin-top: 0;
+padding: 0;
+margin-left: 4px;
+font-size:16px;
+
+
+}
+
+
+
+/* Footer */
+
+
+/* Footer */
+
+.HMR_Footer{
+	width: 864px; /*60%*/
+	/*margin-bottom:10px;*/
+	margin-left: auto;
+	margin-right:auto;
+	padding: 0px;
+	/*border: 1px solid yellow;*/
+	/*background-color:#353535;*/
+	height:135px;
+	
+	
+	
+	
+}
+
+.HMR_FooterTop{
+	margin: 0px 0px 5px 0px; 
+	padding: 0px;
+	height:30px;
+	/*border:1px red solid;*/
+	color: #242424;
+	font-size:11px;
+	position:relative;
+}
+
+.HMR_FooterBottom{
+	margin: 0px;
+	padding: 0px;
+	height:128px;
+	background-color:#353535;
+	/*border: 1px green solid;*/
+	position:relative;
+	
+}
+
+#HMR_imgFooter{
+	position: absolute;
+	left:16px;
+}
+#HMR_scrittaFooterUp{
+	position: absolute;
+	top:-2px;
+	left:/*84px;*/ 100px
+	}
+#HMR_scrittaFooterBottom{
+	position: absolute;
+	top: 9px;
+	left: 100px;
+	}
+
+#HMR_contatti{
+	position: absolute;
+	left: 18px;
+	color: white;
+	top:60px;
+	
+	}
+
+#HMR_login{
+	position: absolute;
+	right: 14px;
+	color: white;
+	top:12px;
+	
+	
+}
+
+#HMR_SocialFooter p{color:white; font-size:14px}
+#HMR_SocialFooter{
+	position:absolute;
+	top:16px;
+	left:42px;
+	
+}
+
+#HMR_SocialFooterFb{
+	position:absolute;
+	top:12px;
+	left:16px;
+}
+
+.fb-like{position:absolute; top:12px; left: 44px; }
+
+#lineaSocial{
+	background-color: #fff;
+	height: 1px;
+	width: 823px;
+	display:block;
+	position: absolute;
+	top: 40px;
+	left: 21px;
+	
+}
+
+.HMR_FooterBottom a{
+	color: white;
+}
+.HMR_FooterBottom a:hover{text-decoration:none;}
+
+
+
+
+/*pagina dell'evento specifico*/
+
+/*  Impostazione pagin evento per tabella, con tr e td che sono class"immaginiTabella" e "scrittaTabella"
+table {
+	width:100%;
+	font-family:Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+ 
+.immagineTabella {
+ width: 54%;
+
+ }
+.scrittaTabella{
+ width: 46%;
+}
+*/
+
+#HMR_PaginaDedicata{
+width: 100%; 
+/*border: 1px solid green;*/
+}
+
+#HMR_PaginaDedicata img{
+float: left;
+width: 380px; /*50%;*/
+margin-right: 10px;
+margin-bottom: 10px;
+/*border: 1px solid orange;*/
+}
+
+.TableDedicatedPage{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.TableDedicatedPage td{
+	vertical-align: top;
+	
+}
+
+.TableDedicatedPage .tdText{
+	padding-left: 10px;
+}
+
+
+
+.TableDedicatedPage h1{
+	margin-top: -3px;
+}
+
+
+
+/*pagina eventi e cronologia*/
+ 
+.HMR_Crono{margin-top:0px;
+margin-bottom: 0px;}
+.HMR_Crono:last-child{margin-bottom: 0px;} /*l'ultimo elemento della cronologia ha margin 0 dal basso */
+
+
+.altro{
+	background:none!important;
+	color:#d81a68;
+	border:none; 
+	padding:0!important;
+	font: inherit;
+	/*border is optional*/
+	outline: 0;
+	cursor: pointer;
+}
+		
+.buttonYear{
+	background:none!important;
+	color:#d81a68;
+	border:none; 
+	padding:0!important;
+	font: inherit;
+	/*border is optional*/
+	outline: 0;
+	cursor: pointer;
+		}
+		
+.titleYear{cursor: pointer; width:60px;}
+		
+.altro:hover{text-decoration: underline}
+	
+.yearsBar{padding-top:10px; padding-bottom: 10px; display:inline;}
+.yearsBar p{text-align: center; margin-bottom:40px; margin-top:15px}
+.yearsBar p a:visited{color: #e43972}
+.yearsBar p a:hover{text-decoration: none; color:#891847; }
+		
+.loadingGif{width:300px; }
+		
+.ArrowDown {
+			
+	border: solid  #e43972;
+	border-width: 0 2px 2px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	margin-bottom:3px;
+	margin-left:3px;
+}
+		
+.ArrowUp {
+			
+	border: solid  #e43972;
+	border-width: 0 2px 2px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	margin-bottom:0px;
+	margin-left:3px;
+}
+		
+.highlightedClickedLink{background-color:rgba(255,0,255,0.3);}
+
+
+
+
+.HMR_Evento{
+	margin-top:0px;
+	margin-bottom: 0px;
+	}
+.HMR_Evento:last-child{margin-bottom: 0px;}
+.HMR_Evento p:first-child{margin-top: 5px;} /*per staccare il primo evento dal suo titolo.*/
+
+
+
+#HMR_Allestimenti{margin-bottom: 0px;} /*do il margine 0 tra ogni div contenente gli eventi. Così il margine sarà dettato dai <p>, <h1> e <h2>*/
+
+
+#HMR_Mostre{margin-bottom: 0px;}
+
+
+#HMR_Seminari{margin-bottom: 0px;}
+
+
+#HMR_Evento{margin-bottom: 0px;}
+
+
+
+/*Pagina riferimenti*/
+
+.HMR_custom-counter {  /*avvicino tutti gli ol al titolo*/
+  margin-top: -22px;
+  
+}
+
+.HMR_custom-counter li{margin-top: -8px;} /*avvicino tra loro tutti i li*/
+
+#HMR_Pubblicazioni{margin-bottom:40px} /*do il margine in basso di ogni div per staccare tutte le liste diverse*/
+#HMR_Interventi{margin-bottom:40px}
+#HMR_Articoli{margin-bottom:40px}
+#HMR_Documenti{margin-bottom:40px}
+
+
+/* ------------------ CMS -------------------- */
+
+.HMR_Form input{
+	font-family: "Source Sans Pro";
+}
+
+/*.HMR_Form{
+	background-color: #eee;
+	padding: 36px;
+}*/
+
+.HMR_Form table{
+	border-collapse: separate;
+	border-spacing: 0px 15px; /*distanza tra le righe*/
+}
+
+.HMR_Form table td{
+	vertical-align: top;
+	/*border: 1px solid red;*/
+	
+	}	
+	
+.HMR_Form table h3{margin: 0px;}
+.HMR_Form table p{margin: 0px;}
+	
+.posizioneLinkAccadimenti{
+position:relative;
+bottom: 30px;
+left:190px;}
+
+#HMR_Accadimento{margin-bottom:50px;}
+#HMR_PgDedicata{margin-bottom:50px;}
+#HMR_inEvidenza{margin-bottom:50px;}
+#HMR_inCronologia{margin-bottom:50px;}
+#HMR_inEventi{margin-bottom:50px;}
+	
+#myTable{
+	/*border: 1px solid black;*/
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#myTable th{
+	width: 200px;
+	margin: 0px;
+	padding: 6px;
+	height:20px;
+	/*border: 1px solid red;*/
+}
+
+#myTable tr:nth-child(odd)		{ background-color:#eee; }
+#myTable tr:nth-child(even)		{ background-color:#fff; }
+
+#myTable th, #myTable td {
+    border-bottom: 1px solid #ddd;
+}
+
+#myTable td{
+	height:20px;
+	width: 200px;
+	margin: 0px;
+	padding: 6px;
+	/*border: 1px solid green;*/
+}
+
+#bottoniPdfs{margin-left: 656px;}
+
+#campiAggiuntiPdf{margin-top:30px;}
+
+#InvioAccadimento{margin-top: 100px;}
+
+/* Administration pages */
+#headerLogin{
+	background-color: #353535;
+	text-align: center;
+	height: 54px;
+	padding: 9px;
+}
+
+#headerLogin h1{
+	margin:auto;
+}

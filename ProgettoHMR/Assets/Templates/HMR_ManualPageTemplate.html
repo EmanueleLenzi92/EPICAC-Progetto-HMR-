@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="it"><head><meta charset="UTF-8">
+<!--///////////////////////////////////////////////////////////////////////////
+//
+// Project:   HMRWeb - HMR project new website, powered by EPICACalpha
+// Package:   Static, handwritten HTML pages
+// Title:     Template , default index.html file
+// File:      HMR_ManualPageTemplate.html
+// Path:      /Assets/Templates/
+// Type:      HTML
+// Started:   2014.02.20
+// Author(s): Giovanni A. Cignoni
+// State:     online
+//
+// Version history.
+// - 2017.11.05  Giovanni A. Cignoni
+//   First version
+//
+// ////////////////////////////////////////////////////////////////////////////
+//
+// This file is part of software developed by the HMR Project
+// Further information at: http://progettohmr.it
+// Copyright (C) 2014-2017 HMR Project, Giovanni A. Cignoni
+//
+// This is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published
+// by the Free Software Foundation; either version 3.0 of the License,
+// or (at your option) any later version.
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty
+// of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+// See the GNU General Public License for more details.
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, see <http://www.gnu.org/licenses/>.
+//
+// /////////////////////////////////////////////////////////////////////////-->
+
+
+<title>Title of the page...</title>
+
+<link rel="stylesheet" type="text/css" href="../HMR_Style.css">
+
+<link 
+	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro"
+	rel="stylesheet">
+
+<link rel="icon" type="image/png" 
+	href="../Assets/Images/HMR_2017g_GC-WebFavIcon16x16.png" />
+
+<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js">
+</script> 
+
+<script type='text/javascript'
+	src='../EPICAC/JSwebsite/searchAndSharing.js'>
+</script>
+
+<script type='text/javascript' 
+	src='../Assets/JS/HMR_CreaHTML.js'>
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description" content="Description of page content " />
+
+<meta name="keywords" content="hackerando hacker hacking macchina ridotta calcolatrice elettronica pisana CEP electronic computer storia history informatica computer science archeologia archeology sperimentale experimental ricostruzioni rebuilding replica repliche replicas simulazione simulation simulatori simulators macchine passato past machines 
+documenti documents riferimenti references bibliografia bibliography paginaQ articoli quotidiano online cignoni giovanni" />
+
+</head>
+
+<body>
+
+<!-- Standard HMRWeb header ///////////////////////////////////////////////////
+// For banner:
+// - set level, 1 = "../", 2 = "../../" and so on;
+// - set image, file name and extension, no path, has to be in /Assets/Images.
+// For menu:
+// - set level, same as banner;
+// - set active menu entry, 1=Cronologia, 2=Eventi and so on.  -->
+
+<div class="HMR_Banner">
+	<script>
+		creaHeader(1, "HMR_2017g_GC-WebHeaderRite-270x105-3.png")
+	</script> 
+</div>
+<div id="HMR_Menu" class="HMR_Menu">
+	<script>
+		creaMenu(1, 3)
+	</script> 
+</div>
+
+<div class="HMR_Content"><div class= "HMR_Text">
+
+<!-- Actual page content starts here ///////////////////////////////////////-->
+		
+<h1>Questo è un titolo di primo livello</h1>
+
+<p>I titoli di primo livello sono usati solo per il titolo della pagina che compare come prima riga, in alto a sinistra se la pagina ha una sola colonna, in alto a destra se la pagina ha due colonne 7/12 + 5/12.</p>
+
+<h2>Questo è un titolo di secondo livello</h2>
+
+<p>I titoli di secondo livello sono usati per le sezioni principali della pagina. Se la pagina ha due colonne 7/12 + 5/12 nella colonna 5/12 non si usano titoli di secondo livello.</p>
+
+<h2>Questo è un altro titolo di secondo livello</h2>
+
+<p>Solo per vedere l'effetto che fa quando ci sono titoli di terzo livello.</p>
+
+<h3>Questo è un titolo di terzo livello</h3>
+
+<p>La forma con titolo su riga separata è l'opzione normale.</p>
+
+<p><strong>Titolo di terzo livello alternativo</strong>. Questa forma alternativa perde la strutturazione semantica, ma occupa meno spazio verticale.</p>
+
+
+<!-- Actual page content ends here /////////////////////////////////////////-->
+
+</div></div>
+
+<!-- Standard HMRWeb footer////////////////////////////////////////////////////
+// Set:
+// - level, 1 = "../", 2 = "../../" and so on;
+// - set copyright start year, YYYY
+// - set copyright end year, YYYY;
+// - set copyright owner, default "Progetto HMR";
+// - set date of page creation, YYYY/MM/DD.  -->
+
+<div class="HMR_Footer">
+	<script>
+		creaFooter(1, "2014", "2017", "G.A. Cignoni", 
+							 "2014/09/23", "2017/10/13 18:15")
+	</script> 
+</div>
+
+</body>
+
+</html>

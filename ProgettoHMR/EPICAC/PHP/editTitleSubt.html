@@ -1,0 +1,30 @@
+<?php
+
+    session_start();
+    if(!isset($_SESSION['login_user'])) {
+        header('Location: ../../../../amministrazione/asset/html/no_login.php?error=inv_access');
+    }
+?>
+
+<html>
+
+<head>
+	<script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript" src="../JSadmin/editTitleSubtitle.js" ></script >
+	<script type="text/javascript" src="../Libs/tinymce/js/tinymce/tinymce.js" ></script > 
+	<script>printTinymce()</script>
+	
+</head>
+
+<body>
+	<textarea id="testoTextArea"></textarea>
+	<br/>
+	<input type="button" value="Conferma" onclick= "confirmTitleSubtitle()"/>
+		
+	
+		
+		
+		
+</body>
+
+</html>
